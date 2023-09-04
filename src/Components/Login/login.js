@@ -2,7 +2,7 @@ import React, { useEffect, useState} from "react";
 import "./login.css";
 import { Button, Avatar, Box, Container, Grid, TextField, CircularProgress, IconButton, InputAdornment,  OutlinedInput, InputLabel, FormControl } from "@mui/material";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as yup from 'yup'
 import { useFormik } from "formik";
 import axios from "axios";
@@ -121,14 +121,19 @@ const Login=()=>{
             </Button>
             <Grid container className="links">
               
-                <a className="forgot" href="/forgot" variant="body2">
+                <p className="forgot" variant="body2">
+                  <Link to="/forgot">
                   Forgot password?
-                </a>
+                  </Link>
+                </p>
             
            
-                <a className="sign" href="/signin" variant="body2">
-                   Sign Up
-                </a>
+                <p className="sign"  variant="body2">
+                  <Link to="/signin">
+                  Sign Up
+                  </Link>
+                   
+                </p>
              
             </Grid>
           </Box>
